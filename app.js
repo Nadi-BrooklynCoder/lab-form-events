@@ -8,7 +8,7 @@ const creatListItem = () => {
     let textInput = input.value;
     const listItem = document.createElement('li')
     listItem.textContent = textInput;
-    listItem.setAttribute('class' , 'todo-list__listItem');
+    listItem.setAttribute('class', 'todo-list__listItem');
     list.append(listItem);
 
     createDeleteButton(listItem);
@@ -27,7 +27,7 @@ const createDeleteButton = (listItem) => {
 
 const handleStrikeThrough = (listItem) => {
     listItem.addEventListener('click', () => {
-        if(listItem.style.textDecoration === 'line-through') {
+        if (listItem.style.textDecoration === 'line-through') {
             listItem.style.textDecoration = 'none'
         } else {
             listItem.style.textDecoration = 'line-through'
@@ -38,10 +38,10 @@ const handleStrikeThrough = (listItem) => {
 const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(input.value.trim() !== '') {
+    if (input.value.trim() !== '') {
         creatListItem();
     }
-   
+
     input.value = '';
 };
 
